@@ -4,7 +4,7 @@ const cors = require('cors');
 app.use(cors());
 const Twitter = require('./api/helpers/twitter');
 const twitter = new Twitter();
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT|| 3000;
 require('dotenv').config();
 
 app.get('/tweets', (req, res) => {
